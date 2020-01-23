@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+<section id="show-page">
+        <div>LV Lover:</div>
+        <div><%= user.name %></div>
+        <div>Email:</div>
+        <div><%= user.email %></div>
+        <div>Profile Pic:</div>
+        <img src="<%= user.profilePic %>" height="100" width="100"/>
+        <div>Details:</div>
+        <div><%= user.details %></div>
+</section>
+    <p></p>
+    <p></p>
+    <p></p>
+        <h3>Upload New Article</h3>
+<form id="article-id" action="/articles/<%= user.id %>" method="POST">
+        <label>Article Link</label>
+        <input type="text"name="article">
+        <label>Title:</label>
+        <input type="text" name="title">
+        <label>Details</label>
+        <input type="text" name="details">        
+        <button type="submit" class="btn-primary" title="ADD">ADD NEW ARTICLE</button>
+</form>
+    <% for(let i = 0; i < articles.length; i++) { %>
+        <img src=<%=articles[i].article%> />
+        <p><%=articles[i].title%></p>
+        <p><%=articles[i].details%></p>
+        <form action="/articles/<%=articles[i]._id%>/delete?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+        <button><a href="">edit</a></button>
+    <%}%>
+
+<%- include('../partials/footer') %>
