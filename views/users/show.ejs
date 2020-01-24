@@ -23,6 +23,7 @@
         <img src="<%=articles[i].article%>.jpg" width="400" height="400"/>
         <p><%=articles[i].title%></p>
         <p><%=articles[i].details%></p>
+        <br></br>
         <form action="/articles/<%=articles[i]._id%>/delete?_method=DELETE" method="POST">
             <button>Delete</button>
         </form>

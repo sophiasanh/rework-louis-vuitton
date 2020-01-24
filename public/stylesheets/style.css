@@ -13,29 +13,49 @@ li {
   color: white;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
   text-align: left;
   padding: 5px 5px;
   text-decoration: none;
 }
-#about.main-background {
+
+#about.main-background.center {
   border-image: url("../images/203599.png") 27 space;
   background-size: 50px;
-  border: 15px solid;
+  margin: auto;
   font-size: 20px;
-  text-align-last: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  position: absolute;
-  left: 50px;
+  font-weight: bold;
+  padding: 10px 0;
+  border: 3px solid;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* position: absolute; */
+  left: 50px; 
   top: 170px;
+  color: black;
   border-image-width: inherit;
-  min-height: 0px;
+  min-height: 10px;
   max-height: 90px;
-  display: inline;
-  
-}
-.h2 {
+  display: inline; 
 
 }
+.p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.a, #user-list {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: yellowgreen;
+}
+
+/* #button, #a {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: yellowgreen;
+} */
 
 #show-page {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
