@@ -5,13 +5,10 @@
         <div>Email:</div>
         <div><%= user.email %></div>
         <div>Profile Pic:</div>
-        <img src="<%= user.profilePic %>" height="100" width="100"/>
-        <div>Details:</div>
-        <div><%= user.details %></div>
+        <img src="<%= user.profilePic %>" height="300" width="300"/>
 </section>
-    <p></p>
-    <p></p>
-    <p></p>
+    <br></br>
+    <br></br>
         <h3>Upload New Article</h3>
 <form id="article-id" action="/articles/<%= user.id %>" method="POST">
         <label>Article Link</label>
@@ -23,13 +20,13 @@
         <button type="submit" class="btn-primary" title="ADD">ADD NEW ARTICLE</button>
 </form>
     <% for(let i = 0; i < articles.length; i++) { %>
-        <img src=<%=articles[i].article%> />
+        <img src="<%=articles[i].article%>.jpg" width="400" height="400"/>
         <p><%=articles[i].title%></p>
         <p><%=articles[i].details%></p>
         <form action="/articles/<%=articles[i]._id%>/delete?_method=DELETE" method="POST">
             <button>Delete</button>
         </form>
-        <button><a href="">edit</a></button>
+        <button><a href="/articles/<%=articles[i]._id%>/update">edit</a></button>
     <%}%>
 
 <%- include('../partials/footer') %>

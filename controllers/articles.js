@@ -10,21 +10,6 @@ const addToGallery = (req, res) => {
   })
 }
 
-const remove = async (req,res) => {
-    console.log('hit route')
-    console.log(req.params.id)
-    try { 
-    const deleteArticle = await Article.findByIdAndRemove(req.params.id);
-    const findUser = await User.findOne({'article': req.params.id});
-    console.log(findUser, 'this is user')
-    findUser.article.remove(req.params.id)
-    await findUser.save();
-    res.redirect(`/users/${req.user._id}`);
-    } catch(err) {
-        console.log(err)
-    }
-}
-
 const index = (req, res) => {
     Article.find({}, (err, articles) => {
         if (err) {
@@ -47,10 +32,8 @@ const create =  async (req, res) => {
     };
     const article = new Article(req.body);
     const findUser = await User.findById(req.params.id)
-    console.log(findUser, 'this is findUser')
     findUser.article.push(article)
     await findUser.save()
-    console.log(findUser, 'this is findUser second<<<<<<')
     article.save(err => {
         if (err) return console.log(err);
         res.redirect(`/users/${findUser._id}`)
@@ -59,8 +42,6 @@ const create =  async (req, res) => {
 };
 
 const show = (req, res) => {
-    console.log('hit article show route')
-    console.log(req.params.id)
     Article.findById(req.params.id, (err, article) => {
         if (err) {
             console.error(err);
@@ -71,11 +52,49 @@ const show = (req, res) => {
     });
 };
 
+const remove = async (req,res) => {
+    try { 
+    const deleteArticle = await Article.findByIdAndRemove(req.params.id);
+    const findUser = await User.findOne({'article': req.params.id});
+    findUser.article.remove(req.params.id)
+    await findUser.save();
+    res.redirect(`/users/${req.user._id}`);
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+const update = async (req, res) => {
+    try {
+        const article = await Article.findByIdAndUpdate(req.params.id, req.body)
+        res.redirect(`/users/${req.user._id}`);
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+const updateShow = async (req, res) => {
+    try {
+        const user = req.user._id
+        const article = await Article.findById(req.params.id)
+        res.render('articles/new', { 
+            article: article,
+            user: user
+        });
+    } catch(err) {
+        console.log(err)
+    }
+}
+
+
 module.exports = {
     addToGallery,
     index,
     new: newArticle,
     create,
     show,
-    remove
+    remove,
+    updateShow,
+    update
+    
 };

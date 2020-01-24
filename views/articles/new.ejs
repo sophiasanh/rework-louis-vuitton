@@ -1,11 +1,11 @@
-<!-- <%- include('../partials/header') %>
-<section2 id="article-id" action="/articles/<%= user.id %>" method="POST">
-    <label>Article Link</label>
-    <input type="text"name="image">
-        <div>Title:</div>
-        <div><%= article.title %></div>
-        <div>Details:</div>
-        <div><%= article.details %></div>
-    </section2>
 
-<%- include('../partials/footer') %> -->
+<h3>Update Article</h3>
+<form action="/articles/<%=article._id%>/update?_method=PUT" method="POST">
+    <label>Article Link</label>
+    <input type="text"name="article" placeholder="<%=article.article%>">
+    <label>Title:</label>
+    <input type="text" name="title" placeholder="<%=article.title%>">
+    <label>Details</label>
+    <input type="text" name="details" placeholder="<%=article.details%>">        
+    <button type="submit" class="btn-primary" title="UPDATE">UPDATE ARTICLE</button>
+</form>

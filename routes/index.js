@@ -7,8 +7,7 @@ router.get('/', function (req, res) {
 });
 
 /* GET home page. */
-router.get(
-  '/auth/google',
+router.get('/auth/google',
   passport.authenticate(
     'google', {
     scope: ['profile', 'email']
@@ -16,8 +15,7 @@ router.get(
 )
 
 // Google OAuth callback route
-router.get(
-  '/oauth2callback',
+router.get('/oauth2callback',
   passport.authenticate(
     'google', {
     successRedirect: '/',
@@ -26,8 +24,7 @@ router.get(
 )
 
 // OAuth logout route
-router.get(
-  '/logout', (req, res) => {
+router.get('/logout', (req, res) => {
     req.logout()
     res.redirect('/')
   }

@@ -1,8 +1,50 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("../images/rlv-background.png");
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+.nav {
+  background-color: saddlebrown;
+  
+} 
+
+li {
+  display: inline;
+  color: white;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+#about.main-background {
+  border-image: url("../images/203599.png") 27 space;
+  background-size: 50px;
+  border: 15px solid;
+  font-size: 20px;
+  text-align-last: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  position: absolute;
+  left: 50px;
+  top: 170px;
+  border-image-width: inherit;
+  min-height: 0px;
+  max-height: 90px;
+  display: inline;
+  
+}
+.h2 {
+
+}
+
+#show-page {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 0;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  color: yellowgreen;
+  background-color: black;
 }

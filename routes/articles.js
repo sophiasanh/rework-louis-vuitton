@@ -7,5 +7,7 @@ router.get('/', articlesCtrl.index)
 router.post('/:id', articlesCtrl.create)
 router.get('/new', articlesCtrl.new)
 router.get('/:id', articlesCtrl.show)
+router.get('/:id/update', articlesCtrl.updateShow)
+router.put('/:id/update', articlesCtrl.update)
 
 module.exports = router
