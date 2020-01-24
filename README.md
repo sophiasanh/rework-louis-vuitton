@@ -30,3 +30,5 @@
 - upvote and like button for each article
 - work more on CSS
 - make title links on menu white, not purple
+- image scroll gallery on home page
+
