@@ -31,7 +31,8 @@
 ### Next Steps
 - build comment box for each article
 - upvote and like button for each article
-- work more on CSS
+- complete CSS design
 - make title links on menu white, not purple
 - image scroll gallery on home page
+- rebuild app on React Native
 
