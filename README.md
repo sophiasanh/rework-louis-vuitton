@@ -1,9 +1,9 @@
 # rework-louis-vuitton
 
-###  Screenshot 
-![](https://imgur.com/5TLEG79)
-![](https://imgur.com/mf1C4yK)
-![](https://imgur.com/oWEdssU)
+###  Screenshots 
+![](https://imgur.com/5TLEG79.png)
+![](https://imgur.com/mf1C4yK.png)
+![](https://imgur.com/oWEdssU.png)
 
 [You can join my app here](https://rework-louis-vuitton.herokuapp.com/)
 
