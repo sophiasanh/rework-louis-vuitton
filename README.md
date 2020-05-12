@@ -1,6 +1,6 @@
 # rework-louis-vuitton
 
-[You can join my app here](https://rework-louis-vuitton.herokuapp.com/Add domain)
+[You can join my app here](https://rework-louis-vuitton.herokuapp.com/)
 
 ## Rework Louis Vuitton is a social app where LV rework designers and LV lovers share a common interest; an affinity for fashion, luxury streetwear and Louis Vuitton. Each LV rework designer has their own profile page where they showcase their reworked articles from custom clothing, shoes to upholstery. On the designer's profile page, LV lovers are able to comment, vote and contact the designer to inquire about custom LV gear.
 
